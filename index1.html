@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document_js</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+        }
+        ul li{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 400px;
+            overflow: hidden;
+        }
+        ul li img{
+            object-fit: cover;
+            height: 400px;
+            object-position: center;
+        }
+        ul li a{
+            border: 2px solid cadetblue;
+            text-decoration: none;
+            color: cadetblue;
+            font-size: 2em;
+            height: 60px;
+            padding: 10px;
+            background-color: azure;
+            width: 100%;
+        }
+    </style>
+<!-- 2 llibreria enllaçada-->
+    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+<!-- 3 escriurem en javascript-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("img").hide();
+            $("li:first-child a").click(function(){
+                $("li:first-child img").slideDown();
+            });
+            $("li:first-child a").dblclick(function(){
+                $("li:first-child img").slideUp();
+            });
+            $("li:nth-child(2) a").click(function(){
+                $("li:nth-child(2) img").slideDown();
+            });
+            $("li:nth-child(2) a").dblclick(function(){
+                $("li:nth-child(2) img").slideUp();
+            });
+            $("li:nth-child(3) a").click(function(){
+                $("li:nth-child(3) img").slideDown();
+            });
+            $("li:nth-child(3) a").dblclick(function(){
+                $("li:nth-child(3) img").slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- 1 contingut-->
+    <ul>
+        <li><a href="#">primer</a>
+        <img src="img2/aguacate.gif" alt="">
+        </li>
+        <li><a href="#">segon</a>
+        <img src="img2/arbre.gif" alt="">
+        </li>
+        <li><a href="#">tercer</a>
+        <img src="img2/sushi.gif" alt="">
+        </li>
+    </ul>
+</body>
+</html>
